@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>个人博客搭建（Hexo+GitHub） | Hexo</title>
+  <title>js笔记 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Create a new post1$ hexo new &quot;My New Post&quot;">
+  <meta name="description" content="js实现保留两位小数123456789101112131415function returnFloat(value) &amp;#123;var value = Math.round(parseFloat(value) * 100) / 100;var xsb = value.toString().split(&quot;.&quot;);if (xsb.length == 1) &amp;#123;value = value.to">
 <meta property="og:type" content="article">
-<meta property="og:title" content="个人博客搭建（Hexo+GitHub）">
-<meta property="og:url" content="http://yoursite.com/2019/01/17/index/index.html">
+<meta property="og:title" content="js笔记">
+<meta property="og:url" content="http://yoursite.com/2019/01/23/my-article/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Create a new post1$ hexo new &quot;My New Post&quot;">
+<meta property="og:description" content="js实现保留两位小数123456789101112131415function returnFloat(value) &amp;#123;var value = Math.round(parseFloat(value) * 100) / 100;var xsb = value.toString().split(&quot;.&quot;);if (xsb.length == 1) &amp;#123;value = value.to">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-22T10:47:13.654Z">
+<meta property="og:updated_time" content="2019-01-23T02:09:27.639Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="个人博客搭建（Hexo+GitHub）">
-<meta name="twitter:description" content="Create a new post1$ hexo new &quot;My New Post&quot;">
+<meta name="twitter:title" content="js笔记">
+<meta name="twitter:description" content="js实现保留两位小数123456789101112131415function returnFloat(value) &amp;#123;var value = Math.round(parseFloat(value) * 100) / 100;var xsb = value.toString().split(&quot;.&quot;);if (xsb.length == 1) &amp;#123;value = value.to">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,28 +154,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-index" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-my-article" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      个人博客搭建（Hexo+GitHub）
+      js笔记
     </h1>
   
 
         
-        <a href="/2019/01/17/index/" class="archive-article-date">
-  	<time datetime="2019-01-17T11:32:03.158Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-17</time>
+        <a href="/2019/01/23/my-article/" class="archive-article-date">
+  	<time datetime="2019-01-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
+        <h3 id="js实现保留两位小数"><a href="#js实现保留两位小数" class="headerlink" title="js实现保留两位小数"></a>js实现保留两位小数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">function</span> returnFloat(value) &#123;</span><br><span class="line">var value = Math.round(parseFloat(value) * 100) / 100;</span><br><span class="line">var xsb = value.toString().split(<span class="string">"."</span>);</span><br><span class="line"><span class="keyword">if</span> (xsb.length == 1) &#123;</span><br><span class="line">value = value.toString() + <span class="string">".00"</span>;</span><br><span class="line"><span class="built_in">return</span> value;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (value.length &gt; 1) &#123;</span><br><span class="line"><span class="keyword">if</span> (xsb[1].length &lt; 2) &#123;</span><br><span class="line">value = value.toString() + <span class="string">"0"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">return</span> value;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -254,7 +253,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/01/17/index/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/01/23/my-article/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -268,15 +267,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/01/23/my-article/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          js笔记
-        
-      </div>
-    </a>
   
+    <a href="/2019/01/17/index/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">个人博客搭建（Hexo+GitHub）</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
