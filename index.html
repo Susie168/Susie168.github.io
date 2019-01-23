@@ -156,6 +156,114 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-index" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/23/index/">个人博客搭建(Hexo+GitHub)</a>
+    </h1>
+  
+
+        
+        <a href="/2019/01/23/index/" class="archive-article-date">
+  	<time datetime="2019-01-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Node-GitHub-Git-Hexo"><a href="#Node-GitHub-Git-Hexo" class="headerlink" title="Node + GitHub + Git + Hexo"></a>Node + GitHub + Git + Hexo</h3><h5 id="Node-安装"><a href="#Node-安装" class="headerlink" title="Node 安装"></a>Node 安装</h5><blockquote>
+<p>下载 + 安装 Node<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p><code>&gt; 返回node版本为安装成功</code></p>
+<h5 id="Git-安装"><a href="#Git-安装" class="headerlink" title="Git  安装"></a>Git  安装</h5><p>下载 + Git<br>可右键鼠标来检查是否安装了Git</p>
+<h4 id="GtiHub注册"><a href="#GtiHub注册" class="headerlink" title="GtiHub注册"></a>GtiHub注册</h4><ul>
+<li>注册账号</li>
+<li>创建仓库<ul>
+<li>点击右上角的new  repository</li>
+<li>Repository name为个人GitHub名+.github.io</li>
+</ul>
+</li>
+<li>开启GitHub pages <ul>
+<li>settings + choose a theme</li>
+</ul>
+</li>
+</ul>
+<h4 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h4><p>Hexo 目录下右键选择Git Bash<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ npm init </span><br><span class="line">$ npm install</span><br><span class="line">$ npm g </span><br><span class="line">$ npm s <span class="comment"># 启动本地服务器</span></span><br></pre></td></tr></table></figure></p>
+<p>根目录的_config.yml文件, Hexo deploy 部署到GitHub</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:Susie168/Susie168.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<h4 id="部署到GitHub"><a href="#部署到GitHub" class="headerlink" title="部署到GitHub"></a>部署到GitHub</h4><p>Git Bash</p>
+<ul>
+<li><p>SSH keys 设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br><span class="line">mkdir key_backup</span><br><span class="line">cp id_rsa* key_backup</span><br><span class="line">rm id_rsa</span><br><span class="line">#以上三步为备份和移除原来的ssh key 设置</span><br><span class="line">ssh-keygen -t rsa -C &quot;邮件地址&quot; #新的key文件</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>SSH Key 添加到GitHub</p>
+<ul>
+<li>首页 右上角setting</li>
+<li>SSH and GPG keys选项下添加你的key(C:\Users\用户名.ssh\id_rsa.pub文件以文本打开全部复制即可)</li>
+</ul>
+</li>
+</ul>
+<h4 id="根目录-config-yml-修改个人配置即可"><a href="#根目录-config-yml-修改个人配置即可" class="headerlink" title="根目录_config.yml 修改个人配置即可"></a>根目录_config.yml 修改个人配置即可</h4><h3 id="遇坑"><a href="#遇坑" class="headerlink" title="遇坑"></a>遇坑</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo -d  #提交的是public文件</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;title&quot;  #source/_post创建了title.md文件，Markdom语法写好文档</span><br><span class="line">$ hexo g  &amp;&amp; hexo d  # 提交更改的.md 文件</span><br></pre></td></tr></table></figure>
+<p><code>其实搭建Hexo博客网上都很多，我除了自己记录一下学习过程，也是为了营造美好开始的假象[捂脸]</code></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">gitHub</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/01/23/index/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-my-article" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -200,69 +308,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/01/23/my-article/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-index" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/17/index/">个人博客搭建（Hexo+GitHub）</a>
-    </h1>
-  
-
-        
-        <a href="/2019/01/17/index/" class="archive-article-date">
-  	<time datetime="2019-01-17T11:32:03.158Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/01/17/index/">展开全文 >></a>
         </p>
       
 
@@ -383,6 +428,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">gitHub</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
