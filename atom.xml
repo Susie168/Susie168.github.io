@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-13T08:57:34.670Z</updated>
+  <updated>2019-02-13T08:58:02.216Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/01/31/resume/"/>
     <id>http://yoursite.com/2019/01/31/resume/</id>
     <published>2019-01-31T01:12:44.000Z</published>
-    <updated>2019-02-13T08:57:34.670Z</updated>
+    <updated>2019-02-13T08:58:02.216Z</updated>
     
     <content type="html"><![CDATA[<hr><h3 id="var-resume-Do-you-know-about-me-keep-reading-make-a-friend"><a href="#var-resume-Do-you-know-about-me-keep-reading-make-a-friend" class="headerlink" title="var resume = Do you know about me ? keep reading : make a friend ;"></a>var resume = Do you know about me ? keep reading : make a friend ;</h3><h4 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h4><pre><code>杨文素                             前端开发工程师女/ 1993.07                       https://susie168.github.io/本科/计算机科学与技术               2858345415@qq.com2016年毕业                         13926725259</code></pre><a id="more"></a><h4 id="工作经历"><a href="#工作经历" class="headerlink" title="工作经历"></a>工作经历</h4><p>2016.07 ~ 2017.03   广州续日科技有限公司<br>2017.06 ~ 至今      广东省电力设计研究院 科诺勘测工程有限公司 </p><h4 id="专业技能"><a href="#专业技能" class="headerlink" title="专业技能"></a>专业技能</h4><ul><li>熟练使用HTML5、CSS3，良好的PS操作技能，能准确还原设计稿；</li><li>熟悉Gulp、Webpack的使用，项目中使用Gulp/Webpack做构建工具；</li><li>了解Node.js的使用，了解中间件，有过相关项目的开发经验；</li><li>了解boostrap.js 的使用，有过移动端，适配网页端的开发经验</li><li>了解Vue.js的使用，项目中使用Vue相关框架来进行系统开发</li><li>了解 Axure、Xmind、MockingBot 等原型工具的使用</li><li>了解Git版本管理工具的使用</li></ul><h4 id="项目经历"><a href="#项目经历" class="headerlink" title="项目经历"></a>项目经历</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2016.08     中星云平台</span><br><span class="line">中星云平台是一个集在线教育、资讯、招聘、服务外包、商城、旅游等于一体的大型云平台;我主要负责项目的PC端和移动端的开发和优化。</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2017.06     广宁供电局全景图像合成专业应用系统</span><br><span class="line">主要用于实现对输电线路基础台账数据管理，内部人员管理，以及对拼接而成的杆塔全景图像管理。我主要是负责系统从0 到 1 的搭建，实现框架为原生JS;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2017.08     无人机出入管理系统</span><br><span class="line">系统主要是对无人机出入库的管理、各个配件的增删查改、无人机故障管理。主要负责完成相关功能和数据的可视化和系统运营，实现框架为Vue</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2017.09      无人机输变电巡视数据管理系统</span><br><span class="line">根据需求对系统做一个巡检图像上传分类、视频功能上传功能，并实现数据的返回展示。后期对巡视数据管理系统做一些页面的功能添加和修改例如登录界面，前端实现主要框架为node</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2017.12      Follow(勘测管理系统)</span><br><span class="line">根据需求对Follow APP进行web端原型设计和系统开发，主要是对勘测项目进程进行可视化管理，前端实现主要框架为Vue</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2017.11      广州局时空大数据三维场景项目</span><br><span class="line">参与广州市三维时空大数据平台的搭建；实现数据库的查询;完成前端页面的渲染和展示;</span><br><span class="line">前端实现主要框架为node</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -38,29 +38,6 @@
     
     
       <category term="about me" scheme="http://yoursite.com/tags/about-me/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>个人博客搭建</title>
-    <link href="http://yoursite.com/2019/01/23/index/"/>
-    <id>http://yoursite.com/2019/01/23/index/</id>
-    <published>2019-01-22T16:00:00.000Z</published>
-    <updated>2019-01-31T03:55:32.820Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Node-GitHub-Git-Hexo"><a href="#Node-GitHub-Git-Hexo" class="headerlink" title="Node + GitHub + Git + Hexo"></a>Node + GitHub + Git + Hexo</h3><h5 id="Node-安装"><a href="#Node-安装" class="headerlink" title="Node 安装"></a>Node 安装</h5><blockquote><p>下载 + 安装 Node<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br></pre></td></tr></table></figure></p></blockquote><p><code>&gt; 返回node版本为安装成功</code><br><a id="more"></a></p><h5 id="Git-安装"><a href="#Git-安装" class="headerlink" title="Git  安装"></a>Git  安装</h5><p>下载 + Git<br>可右键鼠标来检查是否安装了Git</p><h4 id="GitHub-注册"><a href="#GitHub-注册" class="headerlink" title="GitHub 注册"></a>GitHub 注册</h4><ul><li>注册账号</li><li>创建仓库<ul><li>点击右上角的new  repository</li><li>Repository name为个人GitHub名+.github.io</li></ul></li><li>开启GitHub pages <ul><li>settings + choose a theme    </li></ul></li></ul><h4 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h4><p>Hexo 目录下右键选择Git Bash<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ npm init </span><br><span class="line">$ npm install</span><br><span class="line">$ npm g </span><br><span class="line">$ npm s <span class="comment"># 启动本地服务器</span></span><br></pre></td></tr></table></figure></p><p>根目录的_config.yml文件, Hexo deploy 部署到GitHub</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:Susie168/Susie168.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><h4 id="部署到GitHub"><a href="#部署到GitHub" class="headerlink" title="部署到GitHub"></a>部署到GitHub</h4><p>Git Bash</p><ul><li><p>SSH keys 设置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br><span class="line">mkdir key_backup</span><br><span class="line">cp id_rsa* key_backup</span><br><span class="line">rm id_rsa</span><br><span class="line">#以上三步为备份和移除原来的ssh key 设置</span><br><span class="line">ssh-keygen -t rsa -C &quot;邮件地址&quot; #新的key文件</span><br></pre></td></tr></table></figure></li><li><p>SSH Key 添加到GitHub</p><ul><li>首页 右上角setting</li><li>SSH and GPG keys选项下添加你的key(C:\Users\用户名.ssh\id_rsa.pub文件以文本打开全部复制即可)</li></ul></li></ul><h4 id="根目录-config-yml-修改个人配置即可"><a href="#根目录-config-yml-修改个人配置即可" class="headerlink" title="根目录_config.yml 修改个人配置即可"></a>根目录_config.yml 修改个人配置即可</h4><h3 id="遇坑"><a href="#遇坑" class="headerlink" title="遇坑"></a>遇坑</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo -d  #提交的是public文件</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;title&quot;  #source/_post创建了title.md文件，Markdom语法写好文档</span><br><span class="line">$ hexo g  &amp;&amp; hexo d  # 提交更改的.md 文件</span><br></pre></td></tr></table></figure><p><code>其实搭建Hexo博客网上都很多，我除了自己记录一下学习过程，也是为了营造美好开始的假象[捂脸]</code></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Node-GitHub-Git-Hexo&quot;&gt;&lt;a href=&quot;#Node-GitHub-Git-Hexo&quot; class=&quot;headerlink&quot; title=&quot;Node + GitHub + Git + Hexo&quot;&gt;&lt;/a&gt;Node + GitHub + Git + Hexo&lt;/h3&gt;&lt;h5 id=&quot;Node-安装&quot;&gt;&lt;a href=&quot;#Node-安装&quot; class=&quot;headerlink&quot; title=&quot;Node 安装&quot;&gt;&lt;/a&gt;Node 安装&lt;/h5&gt;&lt;blockquote&gt;
-&lt;p&gt;下载 + 安装 Node&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ node -v&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;code&gt;&amp;gt; 返回node版本为安装成功&lt;/code&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="gitHub" scheme="http://yoursite.com/tags/gitHub/"/>
     
   </entry>
   
@@ -84,6 +61,29 @@
     
     
       <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>个人博客搭建</title>
+    <link href="http://yoursite.com/2019/01/23/index/"/>
+    <id>http://yoursite.com/2019/01/23/index/</id>
+    <published>2019-01-22T16:00:00.000Z</published>
+    <updated>2019-01-31T03:55:32.820Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Node-GitHub-Git-Hexo"><a href="#Node-GitHub-Git-Hexo" class="headerlink" title="Node + GitHub + Git + Hexo"></a>Node + GitHub + Git + Hexo</h3><h5 id="Node-安装"><a href="#Node-安装" class="headerlink" title="Node 安装"></a>Node 安装</h5><blockquote><p>下载 + 安装 Node<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br></pre></td></tr></table></figure></p></blockquote><p><code>&gt; 返回node版本为安装成功</code><br><a id="more"></a></p><h5 id="Git-安装"><a href="#Git-安装" class="headerlink" title="Git  安装"></a>Git  安装</h5><p>下载 + Git<br>可右键鼠标来检查是否安装了Git</p><h4 id="GitHub-注册"><a href="#GitHub-注册" class="headerlink" title="GitHub 注册"></a>GitHub 注册</h4><ul><li>注册账号</li><li>创建仓库<ul><li>点击右上角的new  repository</li><li>Repository name为个人GitHub名+.github.io</li></ul></li><li>开启GitHub pages <ul><li>settings + choose a theme    </li></ul></li></ul><h4 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h4><p>Hexo 目录下右键选择Git Bash<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ npm init </span><br><span class="line">$ npm install</span><br><span class="line">$ npm g </span><br><span class="line">$ npm s <span class="comment"># 启动本地服务器</span></span><br></pre></td></tr></table></figure></p><p>根目录的_config.yml文件, Hexo deploy 部署到GitHub</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:Susie168/Susie168.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><h4 id="部署到GitHub"><a href="#部署到GitHub" class="headerlink" title="部署到GitHub"></a>部署到GitHub</h4><p>Git Bash</p><ul><li><p>SSH keys 设置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br><span class="line">mkdir key_backup</span><br><span class="line">cp id_rsa* key_backup</span><br><span class="line">rm id_rsa</span><br><span class="line">#以上三步为备份和移除原来的ssh key 设置</span><br><span class="line">ssh-keygen -t rsa -C &quot;邮件地址&quot; #新的key文件</span><br></pre></td></tr></table></figure></li><li><p>SSH Key 添加到GitHub</p><ul><li>首页 右上角setting</li><li>SSH and GPG keys选项下添加你的key(C:\Users\用户名.ssh\id_rsa.pub文件以文本打开全部复制即可)</li></ul></li></ul><h4 id="根目录-config-yml-修改个人配置即可"><a href="#根目录-config-yml-修改个人配置即可" class="headerlink" title="根目录_config.yml 修改个人配置即可"></a>根目录_config.yml 修改个人配置即可</h4><h3 id="遇坑"><a href="#遇坑" class="headerlink" title="遇坑"></a>遇坑</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo -d  #提交的是public文件</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;title&quot;  #source/_post创建了title.md文件，Markdom语法写好文档</span><br><span class="line">$ hexo g  &amp;&amp; hexo d  # 提交更改的.md 文件</span><br></pre></td></tr></table></figure><p><code>其实搭建Hexo博客网上都很多，我除了自己记录一下学习过程，也是为了营造美好开始的假象[捂脸]</code></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Node-GitHub-Git-Hexo&quot;&gt;&lt;a href=&quot;#Node-GitHub-Git-Hexo&quot; class=&quot;headerlink&quot; title=&quot;Node + GitHub + Git + Hexo&quot;&gt;&lt;/a&gt;Node + GitHub + Git + Hexo&lt;/h3&gt;&lt;h5 id=&quot;Node-安装&quot;&gt;&lt;a href=&quot;#Node-安装&quot; class=&quot;headerlink&quot; title=&quot;Node 安装&quot;&gt;&lt;/a&gt;Node 安装&lt;/h5&gt;&lt;blockquote&gt;
+&lt;p&gt;下载 + 安装 Node&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ node -v&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;&amp;gt; 返回node版本为安装成功&lt;/code&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="gitHub" scheme="http://yoursite.com/tags/gitHub/"/>
     
   </entry>
   
