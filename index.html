@@ -174,12 +174,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="call、apply、bind的区别"><a href="#call、apply、bind的区别" class="headerlink" title="call、apply、bind的区别"></a>call、apply、bind的区别</h3><p>call<br>语法：  </p>
+        <h3 id="call、apply、bind的区别"><a href="#call、apply、bind的区别" class="headerlink" title="call、apply、bind的区别"></a>call、apply、bind的区别</h3><h4 id="call"><a href="#call" class="headerlink" title="call"></a>call</h4><p>语法：  </p>
 <blockquote>
 <p>call(thisObj,arg1,arg2…)<br>a.call(b,1,2);执行环境为b,a里的this指向b;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function add(a,b)&#123;</span><br><span class="line">	console.log(a + b);</span><br><span class="line">&#125;</span><br><span class="line">function sub(a,b)&#123;</span><br><span class="line">	console.log(a - b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">add.call(sub,2,3);  //5</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function Class1()&#123;</span><br><span class="line">    this.name = function()&#123;</span><br><span class="line">    console.log(&quot;class1&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">function class2()&#123;</span><br><span class="line">    Class1.call(this);  //当前的this指向了class1</span><br><span class="line">&#125;</span><br><span class="line">var f = new class2();</span><br><span class="line">f.name();  //调用的是class1内的方法，将class1的name方法交给class2使用</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function my()&#123;</span><br><span class="line">	this.name = &quot;Susie&quot;;</span><br><span class="line">	this.showName = function()&#123;</span><br><span class="line">		console.log(this.name);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">function you()&#123;</span><br><span class="line">	this.name = &quot;Gill&quot;;</span><br><span class="line">&#125;</span><br><span class="line">var girl = new my();</span><br><span class="line">var boy = new you();</span><br><span class="line">girl.showName();  //Susie</span><br><span class="line">//bug:若是没有实例化my()，my.showName()是错误的;</span><br><span class="line"></span><br><span class="line">girl.showName.call(boy);  //在you()的执行环境下,this.name是&quot;Gill&quot;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>继承<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">function Animal(name)&#123;</span><br><span class="line">	this.name = name;</span><br><span class="line">	this.sayWord = function()&#123;</span><br><span class="line">		console.log(this.name);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">function Human()&#123;</span><br><span class="line">	this.sayName = function()&#123;</span><br><span class="line">		console.log(&quot;hello Human&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">function Dog(name)&#123;</span><br><span class="line">	Animal.call(this,name);</span><br><span class="line">	Human.call(this);</span><br><span class="line">&#125;</span><br><span class="line">var dog = new Dog(&apos;I am a  dog&apos;);</span><br><span class="line">dog.sayName();  // hello Human</span><br><span class="line">dog.sayWord(); //I am a dog</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h5 id="apply"><a href="#apply" class="headerlink" title="apply"></a>apply</h5><p>语法：  </p>
+<blockquote>
+<p>apply(thisObj,argArr);<br>对于call、apply来说，二者的区别在于接受的参数不同，call需要把参数按顺序传递进去(用于明确知道数量时)，而 apply 则是把参数放在数组里(用于参数数量不确定时push进去)  </p>
+</blockquote>
+<h4 id="bind"><a href="#bind" class="headerlink" title="bind"></a>bind</h4><p>bind也是可以改变函数体内的this指向, 类似于call(在IE6,7,8不支持)，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var a = function()&#123;</span><br><span class="line">    console.log(this.x);</span><br><span class="line">&#125;</span><br><span class="line">var foo =&#123;</span><br><span class="line">    x:3;</span><br><span class="line">&#125;</span><br><span class="line">bar() //undefined</span><br><span class="line">bar.bind(foo)(); //3   **(bar.bind(foo)绑定函数，根据传入的参数按照顺序来调用)</span><br></pre></td></tr></table></figure></p>
+
       
 
       
@@ -300,79 +309,6 @@
 
 
   
-    <article id="post-my-article" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/23/my-article/">js笔记</a>
-    </h1>
-  
-
-        
-        <a href="/2019/01/23/my-article/" class="archive-article-date">
-  	<time datetime="2019-01-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="js实现保留两位小数"><a href="#js实现保留两位小数" class="headerlink" title="js实现保留两位小数"></a>js实现保留两位小数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">function</span> returnFloat(value) &#123;</span><br><span class="line">var value = Math.round(parseFloat(value) * 100) / 100;</span><br><span class="line">var xsb = value.toString().split(<span class="string">"."</span>);</span><br><span class="line"><span class="keyword">if</span> (xsb.length == 1) &#123;</span><br><span class="line">value = value.toString() + <span class="string">".00"</span>;</span><br><span class="line"><span class="built_in">return</span> value;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (value.length &gt; 1) &#123;</span><br><span class="line"><span class="keyword">if</span> (xsb[1].length &lt; 2) &#123;</span><br><span class="line">value = value.toString() + <span class="string">"0"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">return</span> value;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/01/23/my-article/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-index" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -423,6 +359,79 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/01/23/index/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-my-article" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/23/my-article/">js笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2019/01/23/my-article/" class="archive-article-date">
+  	<time datetime="2019-01-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="js实现保留两位小数"><a href="#js实现保留两位小数" class="headerlink" title="js实现保留两位小数"></a>js实现保留两位小数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">function</span> returnFloat(value) &#123;</span><br><span class="line">var value = Math.round(parseFloat(value) * 100) / 100;</span><br><span class="line">var xsb = value.toString().split(<span class="string">"."</span>);</span><br><span class="line"><span class="keyword">if</span> (xsb.length == 1) &#123;</span><br><span class="line">value = value.toString() + <span class="string">".00"</span>;</span><br><span class="line"><span class="built_in">return</span> value;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (value.length &gt; 1) &#123;</span><br><span class="line"><span class="keyword">if</span> (xsb[1].length &lt; 2) &#123;</span><br><span class="line">value = value.toString() + <span class="string">"0"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">return</span> value;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/01/23/my-article/">展开全文 >></a>
         </p>
       
 
@@ -541,11 +550,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color2">gitHub</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">gitHub</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
