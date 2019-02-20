@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>JavaScript 实现继承 | Susie个人博客</title>
+  <title>Tag: 随笔 | Susie个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="继承实现的几种方式 原型链继承方式原理：每个对象都有一个prototype,返回对象类型原型的引用；利弊：只能单继承，继承后会影响所有概念123456789101112131415 function foo()&amp;#123; 	  this.one = function()&amp;#123; 	      console.log(&amp;quot;我是1&amp;quot;);   	  	 	  &amp;#125; &amp;#1">
-<meta name="keywords" content="javascript">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript 实现继承">
-<meta property="og:url" content="http://yoursite.com/2019/02/12/resume/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Susie个人博客">
+<meta property="og:url" content="http://yoursite.com/tags/随笔/index.html">
 <meta property="og:site_name" content="Susie个人博客">
-<meta property="og:description" content="继承实现的几种方式 原型链继承方式原理：每个对象都有一个prototype,返回对象类型原型的引用；利弊：只能单继承，继承后会影响所有概念123456789101112131415 function foo()&amp;#123; 	  this.one = function()&amp;#123; 	      console.log(&amp;quot;我是1&amp;quot;);   	  	 	  &amp;#125; &amp;#1">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-20T07:16:13.674Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript 实现继承">
-<meta name="twitter:description" content="继承实现的几种方式 原型链继承方式原理：每个对象都有一个prototype,返回对象类型原型的引用；利弊：只能单继承，继承后会影响所有概念123456789101112131415 function foo()&amp;#123; 	  this.one = function()&amp;#123; 	      console.log(&amp;quot;我是1&amp;quot;);   	  	 	  &amp;#125; &amp;#1">
+<meta name="twitter:title" content="Susie个人博客">
   
     <link rel="alternative" href="/atom.xml" title="Susie个人博客" type="application/atom+xml">
   
@@ -151,185 +146,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-resume" class="article article-type-post " itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      JavaScript 实现继承
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/01/23/my-article/" class="archive-article-date">
+  	<time datetime="2019-01-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-23</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/01/23/my-article/">js笔记</a>
     </h1>
   
 
-        
-        <a href="/2019/02/12/resume/" class="archive-article-date">
-  	<time datetime="2019-02-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="继承实现的几种方式"><a href="#继承实现的几种方式" class="headerlink" title="继承实现的几种方式"></a>继承实现的几种方式</h3><ol>
-<li>原型链继承方式<br>原理：每个对象都有一个prototype,返回对象类型原型的引用；<br>利弊：只能单继承，继承后会影响所有概念<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> function foo()&#123;</span><br><span class="line"> 	  this.one = function()&#123;</span><br><span class="line"> 	      console.log(&quot;我是1&quot;);   	  	</span><br><span class="line"> 	  &#125;</span><br><span class="line"> &#125;;</span><br><span class="line">function fn()&#123;</span><br><span class="line">	this.two = function()&#123;</span><br><span class="line"> 	      console.log(&quot;我是2&quot;);   	  	</span><br><span class="line"> 	  &#125;</span><br><span class="line">&#125;</span><br><span class="line">//fn的原型为foo对象</span><br><span class="line">fn.prototype = new foo();</span><br><span class="line">var obj = new fn();</span><br><span class="line">obj.one();  //我是1</span><br><span class="line">obj.two();  //我是2</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<a id="more"></a>
-<ol start="2">
-<li><p>构造函数继承<br>原理: 定义新的构造函数，并在内部用call()调用希望“继承”的构造函数，并绑定this<br>利弊：简单明了；但无法继承原型链上的属性和方法；组合方式更好</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function One(age)&#123;</span><br><span class="line">    this.age = age;</span><br><span class="line">&#125;</span><br><span class="line">function Two(age)&#123;</span><br><span class="line">    One.call(this, age);   //对象冒充</span><br><span class="line">    //Box.apply(this, age); </span><br><span class="line">&#125;</span><br><span class="line">var three = new Two(22);  //22</span><br><span class="line">console.log(three.name);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//原型继承+构造继承是最好复用方式</span><br><span class="line">Two.prototype = new One();</span><br><span class="line">var four = new Two(23); //23</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>复制继承<br>原理：extend复制方式<br>利弊：可多继承</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"> function foo()&#123;</span><br><span class="line"> 	  this.one = function()&#123;</span><br><span class="line"> 	      console.log(&quot;我是1&quot;);   	  	</span><br><span class="line"> 	  &#125;</span><br><span class="line"> &#125;;</span><br><span class="line">function fn()&#123;</span><br><span class="line">	this.two = function()&#123;</span><br><span class="line"> 	      console.log(&quot;我是2&quot;);   	  	</span><br><span class="line"> 	  &#125;</span><br><span class="line"> 	this.extend = function(parent)&#123;</span><br><span class="line"> 		for(var key in parent)&#123;</span><br><span class="line"> 			this[key] = parent[key];</span><br><span class="line"> 		&#125;</span><br><span class="line"> 	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var Three = new fn();</span><br><span class="line">Three.extend(new foo());</span><br><span class="line">Three.one();</span><br><span class="line">Three.two();</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><code>查找资料后看到了ES6标准类的继承，引入了class概念，等细学后再做个总结</code></p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/wechat.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAAByUlEQVR42u3aQY7CMAwFUO5/6bBFGpF+O02oRi8rVEr6ysJybL9e8Rp/1vzbz3uSKzcvXFzcZe6YrgT0ec+3/eevnRhwcXHPc5PHrNyT/B3z/XFxcZ/PzUNSsicuLu5/4s7DVpLo4OLiPpmbpyDVcsbPzmq4uLgL3N4j7/28pb6Li4vb4o7iSg5CSdIzWgsXF/cMNw8ovSNNr8B68VxcXNzN3CQkVYsmVXRh1AMXF/cINw9Yze2Wd774FS4u7gZutWRZvZI0XPM9cXFxz3CTn+Ut1V5QKxdccHFxN3PzwkQ+QtELf1HpBBcX9wg3H4+otkaqL5y/Ki4u7m7uWF7rgal8VsPFxT3CnW+Upz7VNkw5GcLFxT3C7aUgvbQmL5pc/GW4uLg/4ibJSu96b1AjOqvh4uJu5q5sl896JM3XiyovLi7uZm5yaOm1Rm5Iawpvg4uLu8rtlUerQxUrHVJcXNzz3GpwWRnPypuv+XNxcXH3cfM2aq+JkhxyCo0cXFzcg9x8bCIfrqo2bssFU1xc3Mdwd5RNC/kXLi7ug7lJmXWltBp1fnBxcTdz8zGsBFc9UOVJFS4u7hlur/FZbc3mWcoN7VtcXNw+9w1hIFLBO2C6GgAAAABJRU5ErkJggg==" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
   
   
-    <a href="/2019/01/23/my-article/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">js笔记</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -352,9 +222,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
