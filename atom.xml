@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-20T07:16:13.674Z</updated>
+  <updated>2019-02-20T11:56:48.617Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS中的call、apply、bind方法</title>
+    <link href="http://yoursite.com/2019/02/20/changeThis/"/>
+    <id>http://yoursite.com/2019/02/20/changeThis/</id>
+    <published>2019-02-20T10:49:08.000Z</published>
+    <updated>2019-02-20T11:56:48.617Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="call、apply、bind的区别"><a href="#call、apply、bind的区别" class="headerlink" title="call、apply、bind的区别"></a>call、apply、bind的区别</h3><p>call<br>语法：  </p><blockquote><p>call(thisObj,arg1,arg2…)<br>a.call(b,1,2);执行环境为b,a里的this指向b;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function add(a,b)&#123;</span><br><span class="line">console.log(a + b);</span><br><span class="line">&#125;</span><br><span class="line">function sub(a,b)&#123;</span><br><span class="line">console.log(a - b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">add.call(sub,2,3);  //5</span><br></pre></td></tr></table></figure></p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function Class1()&#123;</span><br><span class="line">    this.name = function()&#123;</span><br><span class="line">    console.log(&quot;class1&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">function class2()&#123;</span><br><span class="line">    Class1.call(this);  //当前的this指向了class1</span><br><span class="line">&#125;</span><br><span class="line">var f = new class2();</span><br><span class="line">f.name();  //调用的是class1内的方法，将class1的name方法交给class2使用</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function my()&#123;</span><br><span class="line">this.name = &quot;Susie&quot;;</span><br><span class="line">this.showName = function()&#123;</span><br><span class="line">console.log(this.name);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">function you()&#123;</span><br><span class="line">this.name = &quot;Gill&quot;;</span><br><span class="line">&#125;</span><br><span class="line">var girl = new my();</span><br><span class="line">var boy = new you();</span><br><span class="line">girl.showName();  //Susie</span><br><span class="line">//bug:若是没有实例化my()，my.showName()是错误的;</span><br><span class="line"></span><br><span class="line">girl.showName.call(boy);  //在you()的执行环境下,this.name是&quot;Gill&quot;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;call、apply、bind的区别&quot;&gt;&lt;a href=&quot;#call、apply、bind的区别&quot; class=&quot;headerlink&quot; title=&quot;call、apply、bind的区别&quot;&gt;&lt;/a&gt;call、apply、bind的区别&lt;/h3&gt;&lt;p&gt;call&lt;b
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>JavaScript 实现继承</title>

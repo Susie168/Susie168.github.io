@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | Susie个人博客</title>
+  <title>JS中的call、apply、bind方法 | Susie个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Susie个人博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="call、apply、bind的区别call语法：    call(thisObj,arg1,arg2…)a.call(b,1,2);执行环境为b,a里的this指向b;12345678function add(a,b)&amp;#123;	console.log(a + b);&amp;#125;function sub(a,b)&amp;#123;	console.log(a - b);&amp;#125;add.call(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS中的call、apply、bind方法">
+<meta property="og:url" content="http://yoursite.com/2019/02/20/changeThis/index.html">
 <meta property="og:site_name" content="Susie个人博客">
+<meta property="og:description" content="call、apply、bind的区别call语法：    call(thisObj,arg1,arg2…)a.call(b,1,2);执行环境为b,a里的this指向b;12345678function add(a,b)&amp;#123;	console.log(a + b);&amp;#125;function sub(a,b)&amp;#123;	console.log(a - b);&amp;#125;add.call(">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-02-20T11:56:48.617Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Susie个人博客">
+<meta name="twitter:title" content="JS中的call、apply、bind方法">
+<meta name="twitter:description" content="call、apply、bind的区别call语法：    call(thisObj,arg1,arg2…)a.call(b,1,2);执行环境为b,a里的this指向b;12345678function add(a,b)&amp;#123;	console.log(a + b);&amp;#125;function sub(a,b)&amp;#123;	console.log(a - b);&amp;#125;add.call(">
   
     <link rel="alternative" href="/atom.xml" title="Susie个人博客" type="application/atom+xml">
   
@@ -152,163 +156,165 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-changeThis" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      JS中的call、apply、bind方法
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/02/20/changeThis/" class="archive-article-date">
+
+        
+        <a href="/2019/02/20/changeThis/" class="archive-article-date">
   	<time datetime="2019-02-20T10:49:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-20</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/02/20/changeThis/">JS中的call、apply、bind方法</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="call、apply、bind的区别"><a href="#call、apply、bind的区别" class="headerlink" title="call、apply、bind的区别"></a>call、apply、bind的区别</h3><p>call<br>语法：  </p>
+<blockquote>
+<p>call(thisObj,arg1,arg2…)<br>a.call(b,1,2);执行环境为b,a里的this指向b;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function add(a,b)&#123;</span><br><span class="line">	console.log(a + b);</span><br><span class="line">&#125;</span><br><span class="line">function sub(a,b)&#123;</span><br><span class="line">	console.log(a - b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">add.call(sub,2,3);  //5</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function Class1()&#123;</span><br><span class="line">    this.name = function()&#123;</span><br><span class="line">    console.log(&quot;class1&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">function class2()&#123;</span><br><span class="line">    Class1.call(this);  //当前的this指向了class1</span><br><span class="line">&#125;</span><br><span class="line">var f = new class2();</span><br><span class="line">f.name();  //调用的是class1内的方法，将class1的name方法交给class2使用</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function my()&#123;</span><br><span class="line">	this.name = &quot;Susie&quot;;</span><br><span class="line">	this.showName = function()&#123;</span><br><span class="line">		console.log(this.name);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">function you()&#123;</span><br><span class="line">	this.name = &quot;Gill&quot;;</span><br><span class="line">&#125;</span><br><span class="line">var girl = new my();</span><br><span class="line">var boy = new you();</span><br><span class="line">girl.showName();  //Susie</span><br><span class="line">//bug:若是没有实例化my()，my.showName()是错误的;</span><br><span class="line"></span><br><span class="line">girl.showName.call(boy);  //在you()的执行环境下,this.name是&quot;Gill&quot;</span><br></pre></td></tr></table></figure>
+      
 
-        <div class="article-info info-on-right">
-          
-          
-
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wechat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABwElEQVR42u3aSY7CMBAFUO5/aVpiS8f8Kg8B6XkVEbBfWJRqyOMRr+drje++r/e7V58sXri4uNPc53Bdca+Ov6KM90wMuLi457nj4FXYbkhM6B9suLi4X8atpixJ+MPFxf117io0Li7ur3BnWht5aZTvtqBWw8XFneBWG6Y7rjf2d3FxcYvcZ3El7ZKNp+Pi4h7hJs2LXpuj99toN1xc3M3cmeFo/v35lzlwcXG/gdsbgeTXSdr0z+m4uLhHuElC0xuQ9IapyWAGFxd3N7f3itVMwVPd7UMXBxcXdwM3H5yMfzY/w5kar+Li4i7l5iOTKj3KraoPjIuLe4S7KompNlurjxcFNVxc3KXcagnUG53OBD5cXNyT3Oph+eglb54myRAuLu5JbjUR6d1N/o4khcLFxT3DHRc8+Xi1+lJFEi5xcXHv5c4PV/JXu6qNUVxc3Lu41eOrBc9M0ySa/ODi4i7lVgNKr6TJ6b2CChcXdwc3D175QKXaMM3LIVxc3JPcXnjqlUBb0hdcXNybuDNpSlJ0RUURLi7u13OTgcqy5AYXF/c4txdckkDWK6IWtEVwcXEnuL0ha/UxqjhcXNybuH9nTAYcK7lWVQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/02/12/resume/" class="archive-article-date">
-  	<time datetime="2019-02-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-12</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/02/12/resume/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript 实现继承</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/02/12/resume/">JavaScript 实现继承</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/23/my-article/" class="archive-article-date">
-  	<time datetime="2019-01-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/23/my-article/">js笔记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/23/index/" class="archive-article-date">
-  	<time datetime="2019-01-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/23/index/">个人博客搭建</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">gitHub</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -331,8 +337,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
