@@ -40,29 +40,6 @@
   </entry>
   
   <entry>
-    <title>个人博客搭建</title>
-    <link href="http://yoursite.com/2019/01/23/index/"/>
-    <id>http://yoursite.com/2019/01/23/index/</id>
-    <published>2019-01-22T16:00:00.000Z</published>
-    <updated>2019-01-31T03:55:32.820Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Node-GitHub-Git-Hexo"><a href="#Node-GitHub-Git-Hexo" class="headerlink" title="Node + GitHub + Git + Hexo"></a>Node + GitHub + Git + Hexo</h3><h5 id="Node-安装"><a href="#Node-安装" class="headerlink" title="Node 安装"></a>Node 安装</h5><blockquote><p>下载 + 安装 Node<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br></pre></td></tr></table></figure></p></blockquote><p><code>&gt; 返回node版本为安装成功</code><br><a id="more"></a></p><h5 id="Git-安装"><a href="#Git-安装" class="headerlink" title="Git  安装"></a>Git  安装</h5><p>下载 + Git<br>可右键鼠标来检查是否安装了Git</p><h4 id="GitHub-注册"><a href="#GitHub-注册" class="headerlink" title="GitHub 注册"></a>GitHub 注册</h4><ul><li>注册账号</li><li>创建仓库<ul><li>点击右上角的new  repository</li><li>Repository name为个人GitHub名+.github.io</li></ul></li><li>开启GitHub pages <ul><li>settings + choose a theme    </li></ul></li></ul><h4 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h4><p>Hexo 目录下右键选择Git Bash<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ npm init </span><br><span class="line">$ npm install</span><br><span class="line">$ npm g </span><br><span class="line">$ npm s <span class="comment"># 启动本地服务器</span></span><br></pre></td></tr></table></figure></p><p>根目录的_config.yml文件, Hexo deploy 部署到GitHub</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:Susie168/Susie168.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><h4 id="部署到GitHub"><a href="#部署到GitHub" class="headerlink" title="部署到GitHub"></a>部署到GitHub</h4><p>Git Bash</p><ul><li><p>SSH keys 设置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br><span class="line">mkdir key_backup</span><br><span class="line">cp id_rsa* key_backup</span><br><span class="line">rm id_rsa</span><br><span class="line">#以上三步为备份和移除原来的ssh key 设置</span><br><span class="line">ssh-keygen -t rsa -C &quot;邮件地址&quot; #新的key文件</span><br></pre></td></tr></table></figure></li><li><p>SSH Key 添加到GitHub</p><ul><li>首页 右上角setting</li><li>SSH and GPG keys选项下添加你的key(C:\Users\用户名.ssh\id_rsa.pub文件以文本打开全部复制即可)</li></ul></li></ul><h4 id="根目录-config-yml-修改个人配置即可"><a href="#根目录-config-yml-修改个人配置即可" class="headerlink" title="根目录_config.yml 修改个人配置即可"></a>根目录_config.yml 修改个人配置即可</h4><h3 id="遇坑"><a href="#遇坑" class="headerlink" title="遇坑"></a>遇坑</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo -d  #提交的是public文件</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;title&quot;  #source/_post创建了title.md文件，Markdom语法写好文档</span><br><span class="line">$ hexo g  &amp;&amp; hexo d  # 提交更改的.md 文件</span><br></pre></td></tr></table></figure><p><code>其实搭建Hexo博客网上都很多，我除了自己记录一下学习过程，也是为了营造美好开始的假象[捂脸]</code></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Node-GitHub-Git-Hexo&quot;&gt;&lt;a href=&quot;#Node-GitHub-Git-Hexo&quot; class=&quot;headerlink&quot; title=&quot;Node + GitHub + Git + Hexo&quot;&gt;&lt;/a&gt;Node + GitHub + Git + Hexo&lt;/h3&gt;&lt;h5 id=&quot;Node-安装&quot;&gt;&lt;a href=&quot;#Node-安装&quot; class=&quot;headerlink&quot; title=&quot;Node 安装&quot;&gt;&lt;/a&gt;Node 安装&lt;/h5&gt;&lt;blockquote&gt;
-&lt;p&gt;下载 + 安装 Node&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ node -v&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;code&gt;&amp;gt; 返回node版本为安装成功&lt;/code&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="gitHub" scheme="http://yoursite.com/tags/gitHub/"/>
-    
-  </entry>
-  
-  <entry>
     <title>js笔记</title>
     <link href="http://yoursite.com/2019/01/23/my-article/"/>
     <id>http://yoursite.com/2019/01/23/my-article/</id>
@@ -82,6 +59,29 @@
     
     
       <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>个人博客搭建</title>
+    <link href="http://yoursite.com/2019/01/23/index/"/>
+    <id>http://yoursite.com/2019/01/23/index/</id>
+    <published>2019-01-22T16:00:00.000Z</published>
+    <updated>2019-01-31T03:55:32.820Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Node-GitHub-Git-Hexo"><a href="#Node-GitHub-Git-Hexo" class="headerlink" title="Node + GitHub + Git + Hexo"></a>Node + GitHub + Git + Hexo</h3><h5 id="Node-安装"><a href="#Node-安装" class="headerlink" title="Node 安装"></a>Node 安装</h5><blockquote><p>下载 + 安装 Node<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br></pre></td></tr></table></figure></p></blockquote><p><code>&gt; 返回node版本为安装成功</code><br><a id="more"></a></p><h5 id="Git-安装"><a href="#Git-安装" class="headerlink" title="Git  安装"></a>Git  安装</h5><p>下载 + Git<br>可右键鼠标来检查是否安装了Git</p><h4 id="GitHub-注册"><a href="#GitHub-注册" class="headerlink" title="GitHub 注册"></a>GitHub 注册</h4><ul><li>注册账号</li><li>创建仓库<ul><li>点击右上角的new  repository</li><li>Repository name为个人GitHub名+.github.io</li></ul></li><li>开启GitHub pages <ul><li>settings + choose a theme    </li></ul></li></ul><h4 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h4><p>Hexo 目录下右键选择Git Bash<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ npm init </span><br><span class="line">$ npm install</span><br><span class="line">$ npm g </span><br><span class="line">$ npm s <span class="comment"># 启动本地服务器</span></span><br></pre></td></tr></table></figure></p><p>根目录的_config.yml文件, Hexo deploy 部署到GitHub</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:Susie168/Susie168.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><h4 id="部署到GitHub"><a href="#部署到GitHub" class="headerlink" title="部署到GitHub"></a>部署到GitHub</h4><p>Git Bash</p><ul><li><p>SSH keys 设置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br><span class="line">mkdir key_backup</span><br><span class="line">cp id_rsa* key_backup</span><br><span class="line">rm id_rsa</span><br><span class="line">#以上三步为备份和移除原来的ssh key 设置</span><br><span class="line">ssh-keygen -t rsa -C &quot;邮件地址&quot; #新的key文件</span><br></pre></td></tr></table></figure></li><li><p>SSH Key 添加到GitHub</p><ul><li>首页 右上角setting</li><li>SSH and GPG keys选项下添加你的key(C:\Users\用户名.ssh\id_rsa.pub文件以文本打开全部复制即可)</li></ul></li></ul><h4 id="根目录-config-yml-修改个人配置即可"><a href="#根目录-config-yml-修改个人配置即可" class="headerlink" title="根目录_config.yml 修改个人配置即可"></a>根目录_config.yml 修改个人配置即可</h4><h3 id="遇坑"><a href="#遇坑" class="headerlink" title="遇坑"></a>遇坑</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$hexo -d  #提交的是public文件</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;title&quot;  #source/_post创建了title.md文件，Markdom语法写好文档</span><br><span class="line">$ hexo g  &amp;&amp; hexo d  # 提交更改的.md 文件</span><br></pre></td></tr></table></figure><p><code>其实搭建Hexo博客网上都很多，我除了自己记录一下学习过程，也是为了营造美好开始的假象[捂脸]</code></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Node-GitHub-Git-Hexo&quot;&gt;&lt;a href=&quot;#Node-GitHub-Git-Hexo&quot; class=&quot;headerlink&quot; title=&quot;Node + GitHub + Git + Hexo&quot;&gt;&lt;/a&gt;Node + GitHub + Git + Hexo&lt;/h3&gt;&lt;h5 id=&quot;Node-安装&quot;&gt;&lt;a href=&quot;#Node-安装&quot; class=&quot;headerlink&quot; title=&quot;Node 安装&quot;&gt;&lt;/a&gt;Node 安装&lt;/h5&gt;&lt;blockquote&gt;
+&lt;p&gt;下载 + 安装 Node&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ node -v&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;&amp;gt; 返回node版本为安装成功&lt;/code&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="gitHub" scheme="http://yoursite.com/tags/gitHub/"/>
     
   </entry>
   
