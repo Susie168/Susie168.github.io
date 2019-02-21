@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>js笔记 | Susie个人博客</title>
+  <title>谈幸运 | Susie个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="js实现保留两位小数123456789101112131415function returnFloat(value) &amp;#123;var value = Math.round(parseFloat(value) * 100) / 100;var xsb = value.toString().split(&quot;.&quot;);if (xsb.length == 1) &amp;#123;value = value.to">
+  <meta name="description" content="一次交谈，一点收获   新年开工，站在食堂门口，我就做好了准备，新的一年，白白胖胖！       很开心与大神能沟通技术，也可以很清晰看到自己的不足，让我新的一年的脚印更加清晰，不太会矫情表达我的悲喜交集，我就暂且做个总结就好[捂脸]： 1. 学会总结解决的方案，并比较这几种解决方案的利弊之处   2.">
 <meta name="keywords" content="随笔">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js笔记">
+<meta property="og:title" content="谈幸运">
 <meta property="og:url" content="http://yoursite.com/2019/01/23/my-article/index.html">
 <meta property="og:site_name" content="Susie个人博客">
-<meta property="og:description" content="js实现保留两位小数123456789101112131415function returnFloat(value) &amp;#123;var value = Math.round(parseFloat(value) * 100) / 100;var xsb = value.toString().split(&quot;.&quot;);if (xsb.length == 1) &amp;#123;value = value.to">
+<meta property="og:description" content="一次交谈，一点收获   新年开工，站在食堂门口，我就做好了准备，新的一年，白白胖胖！       很开心与大神能沟通技术，也可以很清晰看到自己的不足，让我新的一年的脚印更加清晰，不太会矫情表达我的悲喜交集，我就暂且做个总结就好[捂脸]： 1. 学会总结解决的方案，并比较这几种解决方案的利弊之处   2.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-21T06:33:38.535Z">
+<meta property="og:updated_time" content="2019-02-21T07:11:38.145Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js笔记">
-<meta name="twitter:description" content="js实现保留两位小数123456789101112131415function returnFloat(value) &amp;#123;var value = Math.round(parseFloat(value) * 100) / 100;var xsb = value.toString().split(&quot;.&quot;);if (xsb.length == 1) &amp;#123;value = value.to">
+<meta name="twitter:title" content="谈幸运">
+<meta name="twitter:description" content="一次交谈，一点收获   新年开工，站在食堂门口，我就做好了准备，新的一年，白白胖胖！       很开心与大神能沟通技术，也可以很清晰看到自己的不足，让我新的一年的脚印更加清晰，不太会矫情表达我的悲喜交集，我就暂且做个总结就好[捂脸]： 1. 学会总结解决的方案，并比较这几种解决方案的利弊之处   2.">
   
     <link rel="alternative" href="/atom.xml" title="Susie个人博客" type="application/atom+xml">
   
@@ -48,7 +48,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="https://raw.githubusercontent.com/Susie168/Susie168.github.io/master/img/my_picture.png" class="js-avatar">
+			<img src="img/my_picture.png" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">Susie</a></h1>
@@ -106,7 +106,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="https://raw.githubusercontent.com/Susie168/Susie168.github.io/master/img/my_picture.png" class="js-avatar">
+				<img src="img/my_picture.png" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">Susie</h1>
@@ -164,7 +164,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      js笔记
+      谈幸运
     </h1>
   
 
@@ -177,7 +177,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="js实现保留两位小数"><a href="#js实现保留两位小数" class="headerlink" title="js实现保留两位小数"></a>js实现保留两位小数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">function</span> returnFloat(value) &#123;</span><br><span class="line">var value = Math.round(parseFloat(value) * 100) / 100;</span><br><span class="line">var xsb = value.toString().split(<span class="string">"."</span>);</span><br><span class="line"><span class="keyword">if</span> (xsb.length == 1) &#123;</span><br><span class="line">value = value.toString() + <span class="string">".00"</span>;</span><br><span class="line"><span class="built_in">return</span> value;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (value.length &gt; 1) &#123;</span><br><span class="line"><span class="keyword">if</span> (xsb[1].length &lt; 2) &#123;</span><br><span class="line">value = value.toString() + <span class="string">"0"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">return</span> value;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="一次交谈，一点收获"><a href="#一次交谈，一点收获" class="headerlink" title="一次交谈，一点收获"></a>一次交谈，一点收获</h3><pre><code>   新年开工，站在食堂门口，我就做好了准备，新的一年，白白胖胖！   
+   很开心与大神能沟通技术，也可以很清晰看到自己的不足，让我新的一年的脚印更加清晰，不太会矫情表达我的悲喜交集，我就暂且做个总结就好[捂脸]：
+1. 学会总结解决的方案，并比较这几种解决方案的利弊之处  
+2.  
+</code></pre>
       
 
       
@@ -422,11 +426,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color1">typescript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">typescript</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
