@@ -90,29 +90,6 @@
   </entry>
   
   <entry>
-    <title>js笔记</title>
-    <link href="http://yoursite.com/2019/01/23/my-article/"/>
-    <id>http://yoursite.com/2019/01/23/my-article/</id>
-    <published>2019-01-22T16:00:00.000Z</published>
-    <updated>2019-02-21T06:33:38.535Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="js实现保留两位小数"><a href="#js实现保留两位小数" class="headerlink" title="js实现保留两位小数"></a>js实现保留两位小数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">function</span> returnFloat(value) &#123;</span><br><span class="line">var value = Math.round(parseFloat(value) * 100) / 100;</span><br><span class="line">var xsb = value.toString().split(<span class="string">"."</span>);</span><br><span class="line"><span class="keyword">if</span> (xsb.length == 1) &#123;</span><br><span class="line">value = value.toString() + <span class="string">".00"</span>;</span><br><span class="line"><span class="built_in">return</span> value;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (value.length &gt; 1) &#123;</span><br><span class="line"><span class="keyword">if</span> (xsb[1].length &lt; 2) &#123;</span><br><span class="line">value = value.toString() + <span class="string">"0"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">return</span> value;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;js实现保留两位小数&quot;&gt;&lt;a href=&quot;#js实现保留两位小数&quot; class=&quot;headerlink&quot; title=&quot;js实现保留两位小数&quot;&gt;&lt;/a&gt;js实现保留两位小数&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr
-      
-    
-    </summary>
-    
-    
-      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
     <title>个人博客搭建</title>
     <link href="http://yoursite.com/2019/01/23/index/"/>
     <id>http://yoursite.com/2019/01/23/index/</id>
@@ -132,6 +109,29 @@
     
     
       <category term="gitHub" scheme="http://yoursite.com/tags/gitHub/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js笔记</title>
+    <link href="http://yoursite.com/2019/01/23/my-article/"/>
+    <id>http://yoursite.com/2019/01/23/my-article/</id>
+    <published>2019-01-22T16:00:00.000Z</published>
+    <updated>2019-02-21T06:33:38.535Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="js实现保留两位小数"><a href="#js实现保留两位小数" class="headerlink" title="js实现保留两位小数"></a>js实现保留两位小数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">function</span> returnFloat(value) &#123;</span><br><span class="line">var value = Math.round(parseFloat(value) * 100) / 100;</span><br><span class="line">var xsb = value.toString().split(<span class="string">"."</span>);</span><br><span class="line"><span class="keyword">if</span> (xsb.length == 1) &#123;</span><br><span class="line">value = value.toString() + <span class="string">".00"</span>;</span><br><span class="line"><span class="built_in">return</span> value;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (value.length &gt; 1) &#123;</span><br><span class="line"><span class="keyword">if</span> (xsb[1].length &lt; 2) &#123;</span><br><span class="line">value = value.toString() + <span class="string">"0"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">return</span> value;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;js实现保留两位小数&quot;&gt;&lt;a href=&quot;#js实现保留两位小数&quot; class=&quot;headerlink&quot; title=&quot;js实现保留两位小数&quot;&gt;&lt;/a&gt;js实现保留两位小数&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
