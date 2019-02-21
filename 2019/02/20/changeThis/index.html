@@ -8,17 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JS中的call、apply、bind方法 | Susie个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="call、apply、bind的区别call语法：    call(thisObj,arg1,arg2…)     a.call(b,1,2);执行环境为b,a里的this指向b;12345678function add(a,b)&amp;#123;	console.log(a + b);&amp;#125;function sub(a,b)&amp;#123;	console.log(a - b);&amp;#125;add.">
+  <meta name="description" content="call、apply、bind的区别call语法：    call(thisObj,arg1,arg2…)        a.call(b,1,2);执行环境为b,a里的this指向b;12345678function add(a,b)&amp;#123;	console.log(a + b);&amp;#125;function sub(a,b)&amp;#123;	console.log(a - b);&amp;#125;a">
+<meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS中的call、apply、bind方法">
 <meta property="og:url" content="http://yoursite.com/2019/02/20/changeThis/index.html">
 <meta property="og:site_name" content="Susie个人博客">
-<meta property="og:description" content="call、apply、bind的区别call语法：    call(thisObj,arg1,arg2…)     a.call(b,1,2);执行环境为b,a里的this指向b;12345678function add(a,b)&amp;#123;	console.log(a + b);&amp;#125;function sub(a,b)&amp;#123;	console.log(a - b);&amp;#125;add.">
+<meta property="og:description" content="call、apply、bind的区别call语法：    call(thisObj,arg1,arg2…)        a.call(b,1,2);执行环境为b,a里的this指向b;12345678function add(a,b)&amp;#123;	console.log(a + b);&amp;#125;function sub(a,b)&amp;#123;	console.log(a - b);&amp;#125;a">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-21T06:33:40.793Z">
+<meta property="og:updated_time" content="2019-02-21T06:35:00.520Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS中的call、apply、bind方法">
-<meta name="twitter:description" content="call、apply、bind的区别call语法：    call(thisObj,arg1,arg2…)     a.call(b,1,2);执行环境为b,a里的this指向b;12345678function add(a,b)&amp;#123;	console.log(a + b);&amp;#125;function sub(a,b)&amp;#123;	console.log(a - b);&amp;#125;add.">
+<meta name="twitter:description" content="call、apply、bind的区别call语法：    call(thisObj,arg1,arg2…)        a.call(b,1,2);执行环境为b,a里的this指向b;12345678function add(a,b)&amp;#123;	console.log(a + b);&amp;#125;function sub(a,b)&amp;#123;	console.log(a - b);&amp;#125;a">
   
     <link rel="alternative" href="/atom.xml" title="Susie个人博客" type="application/atom+xml">
   
@@ -178,9 +179,9 @@
       
         <h3 id="call、apply、bind的区别"><a href="#call、apply、bind的区别" class="headerlink" title="call、apply、bind的区别"></a>call、apply、bind的区别</h3><h4 id="call"><a href="#call" class="headerlink" title="call"></a>call</h4><p>语法：  </p>
 <blockquote>
-<p>call(thisObj,arg1,arg2…)   </p>
+<p>call(thisObj,arg1,arg2…)     </p>
 </blockquote>
-<p>a.call(b,1,2);执行环境为b,a里的this指向b;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function add(a,b)&#123;</span><br><span class="line">	console.log(a + b);</span><br><span class="line">&#125;</span><br><span class="line">function sub(a,b)&#123;</span><br><span class="line">	console.log(a - b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">add.call(sub,2,3);  //5</span><br></pre></td></tr></table></figure></p>
+<p> a.call(b,1,2);执行环境为b,a里的this指向b;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function add(a,b)&#123;</span><br><span class="line">	console.log(a + b);</span><br><span class="line">&#125;</span><br><span class="line">function sub(a,b)&#123;</span><br><span class="line">	console.log(a - b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">add.call(sub,2,3);  //5</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function Class1()&#123;</span><br><span class="line">    this.name = function()&#123;</span><br><span class="line">    console.log(&quot;class1&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">function class2()&#123;</span><br><span class="line">    Class1.call(this);  //当前的this指向了class1</span><br><span class="line">&#125;</span><br><span class="line">var f = new class2();</span><br><span class="line">f.name();  //调用的是class1内的方法，将class1的name方法交给class2使用</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function my()&#123;</span><br><span class="line">	this.name = &quot;Susie&quot;;</span><br><span class="line">	this.showName = function()&#123;</span><br><span class="line">		console.log(this.name);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">function you()&#123;</span><br><span class="line">	this.name = &quot;Gill&quot;;</span><br><span class="line">&#125;</span><br><span class="line">var girl = new my();</span><br><span class="line">var boy = new you();</span><br><span class="line">girl.showName();  //Susie</span><br><span class="line">//bug:若是没有实例化my()，my.showName()是错误的;</span><br><span class="line"></span><br><span class="line">girl.showName.call(boy);  //在you()的执行环境下,this.name是&quot;Gill&quot;</span><br></pre></td></tr></table></figure>
@@ -226,6 +227,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -427,11 +439,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
